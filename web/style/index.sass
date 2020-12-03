@@ -25,6 +25,7 @@ h1
 
 \:root
   --stickers-per-row: 4
+  --hover-zoom: 1.5
   --sticker-size: calc(100vw / var(--stickers-per-row))
 
 $nav-sticker-size: 12vw
@@ -124,6 +125,11 @@ section.stickerpack
 
   > h1
     margin: 0 0 0 .75rem
+
+.sticker-list > .sticker
+  &:hover
+    transform: scale(var(--hover-zoom))
+    z-index: 999
 
 div.sticker
   display: flex
